@@ -32,6 +32,13 @@ from sklearn.model_selection import train_test_split
 
 xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=0.2,random_state=10)
 
+#import logistic regression
+
+from sklearn.linear_model import LogisticRegression
+
+from matplotlib.scale import LogisticTransform
+
+model=LogisticRegression(multi_class='multinomial',solver='saga')
 
 model.fit(xtrain,ytrain)
 
